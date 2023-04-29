@@ -10,7 +10,7 @@ public class SpeedUpCollider : MonoBehaviour {
         PlayerTouching = false;
     }
 
-    private void OnCollisionStay(Collision collision) {
+    private void OnTriggerStay(Collider other) {
         PlayerTouching = true;
     }
 }
