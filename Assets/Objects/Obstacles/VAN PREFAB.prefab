@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSpeedMod: 0
-  SpeedRange_SameDir: {x: 10, y: 20}
-  SpeedRange_Oncoming: {x: 0, y: 15}
+  SpeedRange_SameDir: {x: 2.5, y: 30}
+  SpeedRange_Oncoming: {x: 2.5, y: 30}
   HitAndRunRarity: 30
   HitAndRunSpeedBoost: 15
