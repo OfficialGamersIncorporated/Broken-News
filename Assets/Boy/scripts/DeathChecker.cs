@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DeathChecker : MonoBehaviour {
 
     public bool IsDead = false;
+    public Transform BloodProjectorPrefab;
 
     //public Transform SpriteRenderer;
     new public ParticleSystem particleSystem;
@@ -23,7 +24,11 @@ public class DeathChecker : MonoBehaviour {
         var main = particleSystem.main;
         main.customSimulationSpace = WorldGenerator.Singleton.transform;
         particleSystem.Play();
-        yield return new WaitForSeconds(2);
+        for(int i = 0; i < 8; i++) {
+            Instantiate<Transform>(BloodProjectorPrefab, WorldGenerator.Singleton.transform).position = transform.position;
+            yield return new WaitForSeconds(.25f);
+        }
+        //yield return new WaitForSeconds(2);
         SceneManager.LoadScene("DeadMenu");
     }
 
