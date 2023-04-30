@@ -1804,8 +1804,9 @@ MonoBehaviour:
   carTypes:
   - {fileID: 919132149155446097, guid: ded5791ad2425904a9b006046769130e, type: 3}
   - {fileID: 919132149155446097, guid: ded5791ad2425904a9b006046769130e, type: 3}
-  carParent: {fileID: 0}
+  carParent: {fileID: 1438431201}
   carPosList: []
+  SpawnRate: 1
 --- !u!1 &1127043840
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,7 +2486,6 @@ MonoBehaviour:
   PlayerMaxSpeed: 20
   Spacing: 5
   Ground: {fileID: 1127043840}
-  SpeedUpCollider: {fileID: 2115937851}
 --- !u!4 &1574162289
 Transform:
   m_ObjectHideFlags: 0
