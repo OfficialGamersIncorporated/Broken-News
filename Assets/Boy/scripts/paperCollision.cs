@@ -68,19 +68,19 @@ public class paperCollision : MonoBehaviour
                     //particleSystem.Play();
                 }
             }
-            else if (collision.gameObject.CompareTag("Man"))
+            else if (collision.gameObject.CompareTag("Pedestrian"))
             {
                 GameplayManager gameMan = GameplayManager.Singleton;
 
 
-                if (gameMan.AlreadyScoredDudes.Contains(collision.gameObject))
+                if (gameMan.AlreadyHitPedestrian.Contains(collision.gameObject))
                 {
                     GameplayManager.Singleton.IncrementScore(-1);
                 }
                 else
                 {
-                    gameMan.AlreadyScoredDudes.Add(collision.gameObject);
-                    GameplayManager.Singleton.IncrementScore();
+                    gameMan.AlreadyHitPedestrian.Add(collision.gameObject);
+                    GameplayManager.Singleton.IncrementScore(5);
                     particleSystem.Emit(30);
                     //particleSystem.Play();
                 }
