@@ -5,6 +5,7 @@ using UnityEngine;
 public class paperCollision : MonoBehaviour
 {
     public GameObject theWorld;
+    new public ParticleSystem particleSystem;
     private Rigidbody rb;
     private bool hasCollided = false;
     //public float cylinderLength = 2.0f;
@@ -15,6 +16,10 @@ public class paperCollision : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         transform.rotation = Quaternion.Euler(90f, 0f, 0f);
         transform.SetParent(theWorld.transform);
+
+        // I hate unity I hate unity I hate unity
+        var main = particleSystem.main;
+        main.customSimulationSpace = theWorld.transform;
     }
     void FixedUpdate()
     {
@@ -44,6 +49,8 @@ public class paperCollision : MonoBehaviour
     {
         if(!hasCollided && collision.gameObject.CompareTag("Door")) {
             GameplayManager.Singleton.IncrementScore();
+            particleSystem.Emit(30);
+            //particleSystem.Play();
         }
 
         // Print a message to the console when a collision occurs
