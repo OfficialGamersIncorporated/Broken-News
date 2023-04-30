@@ -8,14 +8,17 @@ public class WorldGenerator : MonoBehaviour {
     public float PlayerMaxSpeed = 20;
     public float Spacing = 10;
     public GameObject Ground;
-    public SpeedUpCollider SpeedUpCollider;
+    //public SpeedUpCollider SpeedUpCollider;
 
     void Start() {
         
     }
     void Update() {
         float currentSpeed = Speed;
-        if(SpeedUpCollider.PlayerTouching) {
+        //if(SpeedUpCollider.PlayerTouching) {
+        //    currentSpeed = PlayerMaxSpeed;
+        //}
+        if(Input.GetButton("Fire3")) {
             currentSpeed = PlayerMaxSpeed;
         }
 
