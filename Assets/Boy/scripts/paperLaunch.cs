@@ -8,18 +8,21 @@ public class paperLaunch : MonoBehaviour
     public GameObject paper;
     public GameObject theWorld;
     public float angle = 45f;
+    private bool onCooldown = false;
+    public float throwCooldown = 1f;
+    private float lastTickThrown;
     // Start is called before the first frame update
-    void Start()
+    public void throwAnimation()
     {
-        
+        GetComponent<Animator>().SetTrigger("Throw");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.time - lastTickThrown > throwCooldown)
         {
-            
+            throwAnimation();
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~LayerMask.GetMask("SpeedUpCollider")))
@@ -45,6 +48,7 @@ public class paperLaunch : MonoBehaviour
                 direction = direction.normalized;
                 rb.velocity = (direction * initialVelocity);//, ForceMode.VelocityChange);
             }
+            lastTickThrown = Time.time;
         }
     }
 }

@@ -112,3 +112,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theWorld: {fileID: 0}
+  cylinderLength: 2
+  spinSpeed: 550
