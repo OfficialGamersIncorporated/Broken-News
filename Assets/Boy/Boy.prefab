@@ -5040,6 +5040,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDead: 0
+  BloodProjectorPrefab: {fileID: 7082849060706896066, guid: 7032d41c3539cb440bbcdd4cb1d5f69e,
+    type: 3}
   particleSystem: {fileID: 3235655673227120942}
 --- !u!1001 &708062197
 PrefabInstance:
