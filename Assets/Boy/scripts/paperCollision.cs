@@ -11,6 +11,7 @@ public class paperCollision : MonoBehaviour
     //public float cylinderLength = 2.0f;
     public float spinSpeed = 550f;
     // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -47,10 +48,19 @@ public class paperCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        // record score
         if(!hasCollided && collision.gameObject.CompareTag("Door")) {
-            GameplayManager.Singleton.IncrementScore();
-            particleSystem.Emit(30);
-            //particleSystem.Play();
+            GameplayManager gameMan = GameplayManager.Singleton;
+            Vector3 newPos = theWorld.transform.InverseTransformPoint(collision.gameObject.transform.position);
+            
+            if(gameMan.AlreadyHitHouses.Contains(newPos)) {
+                GameplayManager.Singleton.IncrementScore(-1);
+            } else {
+                gameMan.AlreadyHitHouses.Add(newPos);
+                GameplayManager.Singleton.IncrementScore();
+                particleSystem.Emit(30);
+                //particleSystem.Play();
+            }
         }
 
         // Print a message to the console when a collision occurs

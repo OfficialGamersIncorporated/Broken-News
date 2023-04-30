@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class DeathChecker : MonoBehaviour {
 
     public bool IsDead = false;
+
     //public Transform SpriteRenderer;
+    new public ParticleSystem particleSystem;
 
     public IEnumerator Die() {
         GetComponent<PlayerMovement>().enabled = false;
@@ -18,6 +20,9 @@ public class DeathChecker : MonoBehaviour {
         gameObject.AddComponent<CapsuleCollider>();
         Rigidbody rigidbody = gameObject.AddComponent<Rigidbody>();
         rigidbody.angularVelocity = Vector3.forward * 90;
+        var main = particleSystem.main;
+        main.customSimulationSpace = WorldGenerator.Singleton.transform;
+        particleSystem.Play();
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("DeadMenu");
     }

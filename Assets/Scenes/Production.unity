@@ -664,6 +664,7 @@ MonoBehaviour:
   - DelayBeforeApply: 30
     WorldSpeed: 10
     CarSpawnRate: 50
+  AlreadyHitHouses: []
 --- !u!4 &909331868
 Transform:
   m_ObjectHideFlags: 0

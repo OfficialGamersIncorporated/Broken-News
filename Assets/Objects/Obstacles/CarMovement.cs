@@ -7,7 +7,10 @@ public class CarMovement : MonoBehaviour
     public float carSpeedMod;
     public Vector2 SpeedRange_SameDir = new Vector2(10, 20);
     public Vector2 SpeedRange_Oncoming = new Vector2(0, 15);
+    public float HitAndRunRarity = 30;
+    public float HitAndRunSpeedBoost = 15;
     Rigidbody carbody;
+    bool IsHitAndRun = false;
 
     
     // Start is called before the first frame update
@@ -39,7 +42,13 @@ public class CarMovement : MonoBehaviour
         {
             carbody.constraints = 0;
         }
-        else if (collision.gameObject.CompareTag("Car")) {
+        if(IsHitAndRun) return;
+        else if(collision.gameObject.CompareTag("Car")) {
+            if(Random.Range(1, HitAndRunRarity) <= 1) {
+                carSpeedMod = WorldGenerator.Singleton.Speed + HitAndRunSpeedBoost;
+                IsHitAndRun = true;
+                return;
+            }
             carbody.constraints = 0;
             carSpeedMod = 0;
         }

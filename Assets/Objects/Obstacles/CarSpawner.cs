@@ -40,7 +40,7 @@ public class CarSpawner : MonoBehaviour
 
 
 
-            print("Difficulty: " + difficulty);
+            //print("Difficulty: " + difficulty);
 
             for (int i = 0; i < difficulty; i++)
             {

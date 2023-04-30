@@ -14,6 +14,7 @@ public class GameplayManager : MonoBehaviour {
     public DifficultyState currentDifficultyState;
     [SerializeField] private float CurrentScore = 0;
     public List<DifficultyState> DifficultyStates = new List<DifficultyState>();
+    public List<Vector3> AlreadyHitHouses = new List<Vector3>();
 
     string ScoreTextDefault;
 
