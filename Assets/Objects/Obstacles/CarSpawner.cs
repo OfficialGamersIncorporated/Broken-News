@@ -13,7 +13,6 @@ public class CarSpawner : MonoBehaviour
 
     private IEnumerator Start()
     {
-        carParent = GameObject.Find("CarsParent");
         carPosList = new GameObject[4];
         for (int i = 0; i < carPosList.Length; i++)
         {
@@ -26,7 +25,7 @@ public class CarSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(1.0f); // Waits one second
 
-            int difficulty = UnityEngine.Random.Range(0, 3); // Randomly chooses difficulty
+            int difficulty = UnityEngine.Random.Range(1, 4); // Randomly chooses difficulty
             // List<int> availableLanes = new() { 0, 1, 2, 3 }; // create a list of available lanes
 
             List<int> availableLanes = new List<int>
