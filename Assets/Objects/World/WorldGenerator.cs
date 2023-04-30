@@ -8,6 +8,7 @@ public class WorldGenerator : MonoBehaviour {
     public float RunSpeedMultiplier = 2;
     //public float PlayerMaxSpeed = 20;
     public float Spacing = 10;
+    public bool IsSprinting = false;
     public GameObject Ground;
     //public SpeedUpCollider SpeedUpCollider;
     public static WorldGenerator Singleton;
@@ -23,7 +24,13 @@ public class WorldGenerator : MonoBehaviour {
         //}
         if(Input.GetButton("Fire3")) {
             currentSpeed = Speed * RunSpeedMultiplier; //PlayerMaxSpeed;
+            IsSprinting = true;
         }
+        else
+        {
+            IsSprinting = false;
+        }
+
 
         transform.position += currentSpeed * Time.fixedDeltaTime * Vector3.left;
         float xOffset = transform.position.x % (Spacing * 2);
