@@ -22,11 +22,11 @@ public class paperLaunch : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && Time.time - lastTickThrown > throwCooldown)
         {
-            throwAnimation();
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, ~LayerMask.GetMask("SpeedUpCollider")))
             {
+                throwAnimation();
                 Vector3 hitPoint = hit.point;
                 hitPoint = Vector3.ProjectOnPlane(hitPoint, Vector3.up);
                 float distance = Vector3.Distance(transform.position, hitPoint);
@@ -47,8 +47,8 @@ public class paperLaunch : MonoBehaviour
                 direction.y = direction.magnitude * Mathf.Tan(angle * Mathf.Deg2Rad);
                 direction = direction.normalized;
                 rb.velocity = (direction * initialVelocity);//, ForceMode.VelocityChange);
+                lastTickThrown = Time.time;
             }
-            lastTickThrown = Time.time;
         }
     }
 }

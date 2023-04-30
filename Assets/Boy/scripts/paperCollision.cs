@@ -14,6 +14,7 @@ public class paperCollision : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+        transform.SetParent(theWorld.transform);
     }
     void FixedUpdate()
     {
@@ -42,7 +43,6 @@ public class paperCollision : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // Print a message to the console when a collision occurs
-        transform.SetParent(theWorld.transform);
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         hasCollided = true;
         //GetComponent<Rigidbody>().isKinematic = true;
