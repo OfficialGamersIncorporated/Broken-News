@@ -144,5 +144,5 @@ MonoBehaviour:
   carSpeedMod: 0
   SpeedRange_SameDir: {x: 2.5, y: 30}
   SpeedRange_Oncoming: {x: 2.5, y: 30}
-  HitAndRunRarity: 30
+  HitAndRunRarity: 15
   HitAndRunSpeedBoost: 15

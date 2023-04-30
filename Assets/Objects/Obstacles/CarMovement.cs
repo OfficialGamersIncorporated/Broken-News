@@ -7,8 +7,8 @@ public class CarMovement : MonoBehaviour
     public float carSpeedMod;
     public Vector2 SpeedRange_SameDir = new Vector2(10, 20);
     public Vector2 SpeedRange_Oncoming = new Vector2(0, 15);
-    public float HitAndRunRarity = 30;
-    public float HitAndRunSpeedBoost = 15;
+    public float HitAndRunRarity = 20;
+    public float HitAndRunSpeedBoost = 20;
     Rigidbody carbody;
     bool IsHitAndRun = false;
 
@@ -42,9 +42,12 @@ public class CarMovement : MonoBehaviour
         {
             carbody.constraints = 0;
         }
+
         if(IsHitAndRun) return;
+
         else if(collision.gameObject.CompareTag("Car")) {
-            if(Random.Range(1, HitAndRunRarity) <= 1) {
+            if(Random.Range(0, HitAndRunRarity) <= 1) {
+                print("HIT AND RUUUUN");
                 carSpeedMod = WorldGenerator.Singleton.Speed + HitAndRunSpeedBoost;
                 IsHitAndRun = true;
                 return;
