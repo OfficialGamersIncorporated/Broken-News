@@ -6,6 +6,7 @@ public class paperLaunch : MonoBehaviour
 {
     //private Vector3 hitPoint;
     public GameObject paper;
+    public GameObject theWorld;
     public float angle = 45f;
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class paperLaunch : MonoBehaviour
 
                 // Spawn the prefab
                 GameObject spawnedObject = Instantiate(paper, transform.position, Quaternion.identity);
+                spawnedObject.GetComponent<paperCollision>().theWorld = theWorld;
 
                 // Add the rigidbody component
                 Rigidbody rb = spawnedObject.AddComponent<Rigidbody>();
