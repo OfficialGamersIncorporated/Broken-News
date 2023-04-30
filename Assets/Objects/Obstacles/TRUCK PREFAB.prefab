@@ -14,6 +14,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59310436aa6cc2544a6e4cf5e6408d58,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59310436aa6cc2544a6e4cf5e6408d58,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59310436aa6cc2544a6e4cf5e6408d58,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.62
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59310436aa6cc2544a6e4cf5e6408d58,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -62,6 +77,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 59310436aa6cc2544a6e4cf5e6408d58,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 59310436aa6cc2544a6e4cf5e6408d58,
         type: 3}
       propertyPath: m_Name
@@ -107,8 +127,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9382917, y: 2.2835946, z: 6.216094}
-  m_Center: {x: -0.015133798, y: 1.1710627, z: -0.40861082}
+  m_Size: {x: 1.784783, y: 2.2835946, z: 6.216094}
+  m_Center: {x: 0.0025784827, y: 1.1710627, z: -0.40861076}
 --- !u!114 &-1334872692165964506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,3 +144,5 @@ MonoBehaviour:
   carSpeedMod: 0
   SpeedRange_SameDir: {x: 2.5, y: 30}
   SpeedRange_Oncoming: {x: 2.5, y: 30}
+  HitAndRunRarity: 30
+  HitAndRunSpeedBoost: 15

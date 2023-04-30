@@ -204,6 +204,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4583980937108712544, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583980937108712544, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583980937156524461, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583980937156524461, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583980938136892648, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583980938136892648, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.32
+      objectReference: {fileID: 0}
     - target: {fileID: 4583980938333533648, guid: 3a49c913387273a45bdf9fe0a2417062,
         type: 3}
       propertyPath: m_Name
@@ -272,7 +302,7 @@ PrefabInstance:
     - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
         type: 3}
       propertyPath: carTypes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
         type: 3}
@@ -286,6 +316,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2843654959365645915, guid: d5c9143c59fa14d4897f04a980c7b438,
         type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[2]
+      value: 
+      objectReference: {fileID: 562922374862144417, guid: 2cf303c604b6c5d41b70a2a123ed2d9d,
+        type: 3}
+    - target: {fileID: 4583980938617747048, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -26.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583980938617747048, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.51
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a49c913387273a45bdf9fe0a2417062, type: 3}
 --- !u!1 &286423820 stripped
