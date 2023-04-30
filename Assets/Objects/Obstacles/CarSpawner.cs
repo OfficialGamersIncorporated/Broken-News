@@ -9,6 +9,8 @@ public class CarSpawner : MonoBehaviour
     public GameObject[] carTypes;
     public GameObject carParent;
     public GameObject[] carPosList;
+    [Tooltip("Waves of cars per minute"), Range(10, 100)]
+    public float SpawnRate = 1;
 
 
     private IEnumerator Start()
@@ -23,7 +25,7 @@ public class CarSpawner : MonoBehaviour
 
         while (true)
         {
-            yield return new WaitForSeconds(1.0f); // Waits one second
+            yield return new WaitForSeconds((1 / SpawnRate) * 60); // Waits one second
 
             int difficulty = UnityEngine.Random.Range(1, 4); // Randomly chooses difficulty
             // List<int> availableLanes = new() { 0, 1, 2, 3 }; // create a list of available lanes
@@ -46,14 +48,14 @@ public class CarSpawner : MonoBehaviour
                 int laneIndex = UnityEngine.Random.Range(0, availableLanes.Count); // get a random index from the available lanes
                 int laneDecider = availableLanes[laneIndex]; // choose the lane at that index
                 availableLanes.RemoveAt(laneIndex); // remove the chosen lane from the list
-                print("Lane: " + laneDecider);
-                print("Car Type: " + carTypeDecider);
+                //print("Lane: " + laneDecider);
+                //print("Car Type: " + carTypeDecider);
 
 
 
                 GameObject chosenLane = carPosList[laneDecider];
                 Vector3 clonedCarPos = new Vector3(chosenLane.transform.position.x, 0, chosenLane.transform.position.z);
-                Instantiate(carTypes[carTypeDecider], clonedCarPos, Quaternion.identity, carParent.transform);
+                Instantiate(carTypes[carTypeDecider], clonedCarPos, chosenLane.transform.rotation, carParent.transform);
             }
 
             //GameObject clonedCar = Instantiate(carTypes[carTypeDecider], carPosList[laneDecider].transform.position, carPosList[laneDecider].transform.rotation);
