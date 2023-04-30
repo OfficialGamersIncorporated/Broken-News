@@ -20,7 +20,7 @@ public class WorldGenerator : MonoBehaviour {
         }
 
         transform.position += currentSpeed * Time.deltaTime * Vector3.left;
-        float xOffset = transform.position.x % Spacing * 2;
+        float xOffset = transform.position.x % (Spacing * 2);
         Ground.transform.position = new Vector3(xOffset, transform.position.y, transform.position.z);
     }
 }
