@@ -49,22 +49,46 @@ public class paperCollision : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // record score
-        if(!hasCollided && collision.gameObject.CompareTag("Door")) {
-            GameplayManager gameMan = GameplayManager.Singleton;
-            Vector3 doorPos = collision.transform.parent.position;
-            Vector3 doorWorldPos = theWorld.transform.InverseTransformPoint(doorPos);
+        if(!hasCollided) {
             
-            if(gameMan.AlreadyHitHouses.Contains(doorWorldPos)) {
-                GameplayManager.Singleton.IncrementScore(-10);
-            } else {
-                gameMan.AlreadyHitHouses.Add(doorWorldPos);
-                float distanceDivider = 2;
-                int distanceBasedScore = (int)Mathf.Round(9 - Mathf.Clamp((transform.position - doorPos).magnitude * distanceDivider, 0, 10));
-                print(distanceBasedScore);
-                GameplayManager.Singleton.IncrementScore(distanceBasedScore);
-                particleSystem.Emit(30);
-                //particleSystem.Play();
+            if(collision.gameObject.CompareTag("Door"))
+            {
+                GameplayManager gameMan = GameplayManager.Singleton;
+                Vector3 newPos = theWorld.transform.InverseTransformPoint(collision.gameObject.transform.position);
+
+                if (gameMan.AlreadyHitHouses.Contains(newPos))
+                {
+                    GameplayManager.Singleton.IncrementScore(-1);
+                }
+                else
+                {
+                    gameMan.AlreadyHitHouses.Add(newPos);
+                    GameplayManager.Singleton.IncrementScore();
+                    particleSystem.Emit(30);
+                    //particleSystem.Play();
+                }
             }
+            else if (collision.gameObject.CompareTag("Man"))
+            {
+                GameplayManager gameMan = GameplayManager.Singleton;
+
+
+                if (gameMan.AlreadyScoredDudes.Contains(collision.gameObject))
+                {
+                    GameplayManager.Singleton.IncrementScore(-1);
+                }
+                else
+                {
+                    gameMan.AlreadyScoredDudes.Add(collision.gameObject);
+                    GameplayManager.Singleton.IncrementScore();
+                    particleSystem.Emit(30);
+                    //particleSystem.Play();
+                }
+            }
+            
+
+
+
         }
 
         // Print a message to the console when a collision occurs
