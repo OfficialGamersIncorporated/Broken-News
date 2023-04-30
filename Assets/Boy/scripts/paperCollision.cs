@@ -51,13 +51,17 @@ public class paperCollision : MonoBehaviour
         // record score
         if(!hasCollided && collision.gameObject.CompareTag("Door")) {
             GameplayManager gameMan = GameplayManager.Singleton;
-            Vector3 newPos = theWorld.transform.InverseTransformPoint(collision.gameObject.transform.position);
+            Vector3 doorPos = collision.transform.parent.position;
+            Vector3 doorWorldPos = theWorld.transform.InverseTransformPoint(doorPos);
             
-            if(gameMan.AlreadyHitHouses.Contains(newPos)) {
-                GameplayManager.Singleton.IncrementScore(-1);
+            if(gameMan.AlreadyHitHouses.Contains(doorWorldPos)) {
+                GameplayManager.Singleton.IncrementScore(-10);
             } else {
-                gameMan.AlreadyHitHouses.Add(newPos);
-                GameplayManager.Singleton.IncrementScore();
+                gameMan.AlreadyHitHouses.Add(doorWorldPos);
+                float distanceDivider = 2;
+                int distanceBasedScore = (int)Mathf.Round(9 - Mathf.Clamp((transform.position - doorPos).magnitude * distanceDivider, 0, 10));
+                print(distanceBasedScore);
+                GameplayManager.Singleton.IncrementScore(distanceBasedScore);
                 particleSystem.Emit(30);
                 //particleSystem.Play();
             }
