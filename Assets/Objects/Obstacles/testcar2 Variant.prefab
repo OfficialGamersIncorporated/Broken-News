@@ -14,6 +14,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a44384d7670759428e62239ae6959d8,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a44384d7670759428e62239ae6959d8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a44384d7670759428e62239ae6959d8,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 9a44384d7670759428e62239ae6959d8,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -104,7 +119,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 124
   m_CollisionDetection: 0
 --- !u!65 &4963364109935686145
 BoxCollider:
@@ -117,7 +132,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9856279, y: 1.94, z: 4.7344337}
+  m_Size: {x: 1.84, y: 1.94, z: 4.7344337}
   m_Center: {x: 0, y: 0.95000005, z: -0.066732645}
 --- !u!114 &3332253025160432780
 MonoBehaviour:
@@ -132,3 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSpeedMod: 0
+  SpeedRange_SameDir: {x: 2.5, y: 30}
+  SpeedRange_Oncoming: {x: 2.5, y: 30}

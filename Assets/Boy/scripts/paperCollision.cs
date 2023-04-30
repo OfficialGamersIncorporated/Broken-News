@@ -7,7 +7,7 @@ public class paperCollision : MonoBehaviour
     public GameObject theWorld;
     private Rigidbody rb;
     private bool hasCollided = false;
-    public float cylinderLength = 2.0f;
+    //public float cylinderLength = 2.0f;
     public float spinSpeed = 550f;
     // Start is called before the first frame update
     void Start()
@@ -42,6 +42,10 @@ public class paperCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if(!hasCollided && collision.gameObject.CompareTag("Door")) {
+            GameplayManager.Singleton.IncrementScore();
+        }
+
         // Print a message to the console when a collision occurs
         GetComponent<Rigidbody>().velocity = Vector3.zero;
         hasCollided = true;

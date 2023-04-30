@@ -8,7 +8,7 @@ public class paperLaunch : MonoBehaviour
     public GameObject paper;
     public GameObject theWorld;
     public float angle = 45f;
-    private bool onCooldown = false;
+    //private bool onCooldown = false;
     public float throwCooldown = 1f;
     private float lastTickThrown;
     // Start is called before the first frame update
@@ -40,13 +40,14 @@ public class paperLaunch : MonoBehaviour
                 spawnedObject.GetComponent<paperCollision>().theWorld = theWorld;
 
                 // Add the rigidbody component
-                Rigidbody rb = spawnedObject.AddComponent<Rigidbody>();
+                //Rigidbody rb = spawnedObject.AddComponent<Rigidbody>(); // fucking why? just add it to the prefab you stupid robot
+                Rigidbody rb = spawnedObject.GetComponent<Rigidbody>();
 
                 // Calculate the direction and apply the force
                 Vector3 direction = hitPoint - transform.position;
                 direction.y = direction.magnitude * Mathf.Tan(angle * Mathf.Deg2Rad);
                 direction = direction.normalized;
-                rb.velocity = (direction * initialVelocity);//, ForceMode.VelocityChange);
+                rb.velocity = (direction * initialVelocity); //, ForceMode.VelocityChange);
                 lastTickThrown = Time.time;
             }
         }

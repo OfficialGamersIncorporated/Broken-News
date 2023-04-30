@@ -134,7 +134,7 @@ MonoBehaviour:
   paper: {fileID: 7066169182863277519, guid: dd4e952567b050d41a71d6b5e2459fc3, type: 3}
   theWorld: {fileID: 0}
   angle: 45
-  throwCooldown: 1
+  throwCooldown: 0.5
 --- !u!95 &296613608
 Animator:
   serializedVersion: 5
@@ -169,7 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDead: 0
-  SpriteRenderer: {fileID: 2975203046988213024}
 --- !u!1001 &708062197
 PrefabInstance:
   m_ObjectHideFlags: 0
