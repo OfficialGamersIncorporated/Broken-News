@@ -9,6 +9,7 @@ public class DeathChecker : MonoBehaviour {
     public Transform BloodProjectorPrefab;
     public ParticleSystem PaperParticleEmitter;
     public static DeathChecker Singleton;
+    AudioSource deathSound;
     Animator animator;
 
     //public Transform SpriteRenderer;
@@ -16,6 +17,7 @@ public class DeathChecker : MonoBehaviour {
     void Awake()
     {
         Singleton = this;
+        deathSound = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
     public IEnumerator Die() {
@@ -37,6 +39,7 @@ public class DeathChecker : MonoBehaviour {
         UnityBullshit.customSimulationSpace = WorldGenerator.Singleton.transform;
         var moreUnityBullshit = PaperParticleEmitter.subEmitters.GetSubEmitterSystem(0).main;
         moreUnityBullshit.customSimulationSpace = WorldGenerator.Singleton.transform;
+        if(deathSound) deathSound.Play();
         PaperParticleEmitter.Emit(25);
         for(int i = 0; i < 8; i++) {
             Instantiate<Transform>(BloodProjectorPrefab, WorldGenerator.Singleton.transform).position = transform.position;

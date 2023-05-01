@@ -148,3 +148,78 @@ MonoBehaviour:
   HitAndRunSpeedBoost: 15
   AngrySpeachBubblePrefab: {fileID: 4631931854211429721, guid: bfbd51565c962ac47a700d4a1f0283f4,
     type: 3}
+--- !u!4 &3187811528891186401 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 59310436aa6cc2544a6e4cf5e6408d58,
+    type: 3}
+  m_PrefabInstance: {fileID: 3150224849562589962}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6406566104569472493
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3187811528891186401}
+    m_Modifications:
+    - target: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3150980785034125779, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_Name
+      value: CarSound
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6123239987377f14bb7191b2da74a3a0, type: 3}

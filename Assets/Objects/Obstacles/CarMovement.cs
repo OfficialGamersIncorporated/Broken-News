@@ -14,6 +14,8 @@ public class CarMovement : MonoBehaviour
     Rigidbody carbody;
     bool IsHitAndRun = false;
 
+    AudioSource Sound_HitAndRun;
+
     
     // Start is called before the first frame update
     void Start()
