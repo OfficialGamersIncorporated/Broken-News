@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: ea1329160d49d0446a75770f96a5908d
+guid: 1e349fa5330b935428d4d37815f45075
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: SceneMat
-    second: {fileID: 2100000, guid: d36ae74c6d90e194a874c1c7d3c3add5, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
