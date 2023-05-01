@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: SceneMat
-    second: {fileID: 2100000, guid: 5a7be93ace119584fbbf338496ab44dc, type: 2}
+    second: {fileID: 2100000, guid: 5485ca3e2e69cef42ab39c0d87b7311e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
