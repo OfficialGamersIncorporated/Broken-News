@@ -12,7 +12,7 @@ public class GameplayManager : MonoBehaviour {
 
     [Space, Tooltip("this is only visible for debugging.")]
     public DifficultyState currentDifficultyState;
-    [SerializeField] private float CurrentScore = 0;
+    public static float CurrentScore = 0;
     public List<DifficultyState> DifficultyStates = new List<DifficultyState>();
     public List<Vector3> AlreadyHitHouses = new List<Vector3>();
     public List<GameObject> AlreadyHitPedestrian = new List<GameObject>();
@@ -23,6 +23,7 @@ public class GameplayManager : MonoBehaviour {
 
     IEnumerator Start() {
         Singleton = this;
+        CurrentScore = 0;
         ScoreTextDefault = ScoreText.text;
         ScoreText.text = ScoreTextDefault + CurrentScore.ToString();
 
