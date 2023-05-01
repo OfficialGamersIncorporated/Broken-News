@@ -65,8 +65,8 @@ MonoBehaviour:
   carSpeedMod: 0
   SpeedRange_SameDir: {x: 2.5, y: 30}
   SpeedRange_Oncoming: {x: 2.5, y: 30}
-  HitAndRunRarity: 15
-  HitAndRunSpeedBoost: 15
+  HitAndRunRarity: 20
+  HitAndRunSpeedBoost: 12.5
   AngrySpeachBubblePrefab: {fileID: 4631931854211429721, guid: bfbd51565c962ac47a700d4a1f0283f4,
     type: 3}
   Sound_HitAndRun: {fileID: 8626628720770920591}

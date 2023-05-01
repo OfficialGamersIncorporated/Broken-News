@@ -9,6 +9,7 @@ public class GenericDeathChecker : MonoBehaviour {
     public Transform BloodProjectorPrefab;
     [HideInInspector()]
     public GameObject world;
+    AudioSource DeathSound;
 
     //public Transform SpriteRenderer;
     new public ParticleSystem particleSystem;
@@ -19,6 +20,7 @@ public class GenericDeathChecker : MonoBehaviour {
     void Start()
     {
         world = WorldGenerator.Singleton.gameObject;
+        DeathSound = GetComponent<AudioSource>();
     }
     public IEnumerator Die() {
         transform.SetParent(world.transform);
@@ -32,6 +34,7 @@ public class GenericDeathChecker : MonoBehaviour {
         var main = particleSystem.main;
         main.customSimulationSpace = WorldGenerator.Singleton.transform;
         particleSystem.Play();
+        if(DeathSound) DeathSound.Play();
         for(int i = 0; i < 8; i++) {
             Instantiate<Transform>(BloodProjectorPrefab, WorldGenerator.Singleton.transform).position = transform.position;
             yield return new WaitForSeconds(.25f);

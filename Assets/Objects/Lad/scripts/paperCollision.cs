@@ -5,6 +5,8 @@ using UnityEngine;
 public class paperCollision : MonoBehaviour
 {
     public GameObject theWorld;
+    public AudioSource Sound_Score;
+    AudioSource hitSound;
     new public ParticleSystem particleSystem;
     private Rigidbody rb;
     private bool hasCollided = false;
@@ -14,6 +16,7 @@ public class paperCollision : MonoBehaviour
 
     void Start()
     {
+        hitSound = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         transform.rotation = Quaternion.Euler(90f, 0f, 0f);
         transform.SetParent(theWorld.transform);
@@ -48,9 +51,11 @@ public class paperCollision : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if(hitSound) hitSound.Play();
+
         // record score
         if(!hasCollided) {
-            
+
             if(collision.gameObject.CompareTag("Door"))
             {
                 GameplayManager gameMan = GameplayManager.Singleton;
@@ -67,6 +72,7 @@ public class paperCollision : MonoBehaviour
                     GameplayManager.Singleton.IncrementScore(distanceBasedScore);
                     particleSystem.Emit(30);
                     //particleSystem.Play();
+                    if(Sound_Score) Sound_Score.Play();
                 }
             }
             else if (collision.gameObject.CompareTag("Pedestrian"))
@@ -84,16 +90,16 @@ public class paperCollision : MonoBehaviour
                     GameplayManager.Singleton.IncrementScore(5);
                     particleSystem.Emit(30);
                     //particleSystem.Play();
+                    if(Sound_Score) Sound_Score.Play();
                     pedestrianAnimationSwitcher itsHit = collision.gameObject.GetComponent<pedestrianAnimationSwitcher>();
                     if(itsHit){
                         itsHit.pedHit();
                     }
                 }
             }
-            
-
-
-
+        } else {
+            // turn down volume for hits after the first one.
+            if(hitSound) hitSound.volume *= .5f;
         }
 
         // Print a message to the console when a collision occurs
