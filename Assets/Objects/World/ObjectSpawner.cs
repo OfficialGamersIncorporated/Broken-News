@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pedestrianSpawner : MonoBehaviour
+public class ObjectSpawner : MonoBehaviour
 {
     public GameObject[] pedestrianTypes;
     public GameObject pedestrianParent;
@@ -14,11 +14,12 @@ public class pedestrianSpawner : MonoBehaviour
     // Start is called before the first frame update
     private IEnumerator Start()
     {
-        pedestrianPosList = new GameObject[4];
-        for (int i = 0; i < pedestrianPosList.Length; i++)
-        {
-            pedestrianPosList[i] = GameObject.Find("pedPos" + (i));
-        }
+        // this was searching the entire scene for these objects including other spawner's children. Manually add them in the editor isntead.
+        //pedestrianPosList = new GameObject[4];
+        //for (int i = 0; i < pedestrianPosList.Length; i++)
+        //{
+        //    pedestrianPosList[i] = GameObject.Find("pedPos" + (i));
+        //}
 
         while (true)
         {
@@ -31,7 +32,7 @@ public class pedestrianSpawner : MonoBehaviour
             Vector3 clonedPedestrianPos = new Vector3(chosenPedSpawn.transform.position.x, 0, chosenPedSpawn.transform.position.z);
             Instantiate(pedestrianTypes[pedestrianTypeDecider], clonedPedestrianPos, chosenPedSpawn.transform.rotation, pedestrianParent.transform);
 
-            print("Spawn Pos: " + pedestrianSpawnDecider);
+            //print("Spawn Pos: " + pedestrianSpawnDecider);
 
         }
 

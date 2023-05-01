@@ -206,10 +206,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pedestrianTypes:
-  - {fileID: 4177137771308905214, guid: b1fc2afc6830bef4ab94af6f78237301, type: 3}
+  - {fileID: 3364148710552349198, guid: f02276b51a75d5044adf4ab05fb28096, type: 3}
   pedestrianParent: {fileID: 0}
-  pedestrianPosList: []
-  PedestrianSpawnRateMult: 56.9
+  pedestrianPosList:
+  - {fileID: 3709157786278988652}
+  - {fileID: 3709157785590198675}
+  - {fileID: 3709157786066652089}
+  - {fileID: 3709157785538150255}
+  - {fileID: 3709157786826253992}
+  - {fileID: 3709157785622355205}
+  PedestrianSpawnRateMult: 20
 --- !u!1 &3709157786826253992
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3709157786826253992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.62, y: 0, z: -4.25}
+  m_LocalPosition: {x: 31.62, y: 0, z: -5.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
