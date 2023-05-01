@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Door
   - Car
-  - Man
+  - Pedestrian
   layers:
   - Default
   - TransparentFX

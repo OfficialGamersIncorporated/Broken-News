@@ -30,6 +30,9 @@ public class pedestrianSpawner : MonoBehaviour
             GameObject chosenPedSpawn = pedestrianPosList[pedestrianSpawnDecider];
             Vector3 clonedPedestrianPos = new Vector3(chosenPedSpawn.transform.position.x, 0, chosenPedSpawn.transform.position.z);
             Instantiate(pedestrianTypes[pedestrianTypeDecider], clonedPedestrianPos, chosenPedSpawn.transform.rotation, pedestrianParent.transform);
+
+            print("Spawn Pos: " + pedestrianSpawnDecider);
+
         }
 
 
