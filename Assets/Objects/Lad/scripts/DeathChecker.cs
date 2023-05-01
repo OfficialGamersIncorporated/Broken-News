@@ -64,7 +64,7 @@ public class DeathChecker : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision collision) {
-        if(collision.gameObject.CompareTag("Car")) {
+        if(collision.gameObject.CompareTag("Car") || collision.gameObject.CompareTag("PitBull")) {
             if(!IsDead) {
                 IsDead = true;
                 StartCoroutine(Die());

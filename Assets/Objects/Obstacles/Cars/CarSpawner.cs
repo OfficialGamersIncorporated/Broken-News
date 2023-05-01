@@ -41,7 +41,7 @@ public class CarSpawner : MonoBehaviour
             for (int i = 0; i < difficulty; i++)
             {
                 int rarityDecider = UnityEngine.Random.Range(0, rarityChance);
-                print("Rarity roll: " + rarityDecider);
+                //print("Rarity roll: " + rarityDecider);
                 if(rarityDecider < (rarityChance - 1)) // chance for normal car type
                 {
                     int carTypeDecider = UnityEngine.Random.Range(0, carTypesNormal.Length); // Randomly chooses car model

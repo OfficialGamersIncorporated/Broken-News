@@ -13,7 +13,7 @@ public class WorldGenerator : MonoBehaviour {
     //public SpeedUpCollider SpeedUpCollider;
     public static WorldGenerator Singleton;
 
-    void Start() {
+    void Awake() {
         Singleton = this;
     }
 

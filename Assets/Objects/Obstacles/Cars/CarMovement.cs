@@ -66,7 +66,7 @@ public class CarMovement : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // if we hit the pitBull always run it the hell over // car should still get derailed though and fly into oncoming traffic.
-        if(collision.gameObject.CompareTag("Player") || collision.gameObject.name == "PitBull")
+        if(collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("PitBull"))
         {
             carbody.constraints = 0;
             EnableAngrySpeachBubble();

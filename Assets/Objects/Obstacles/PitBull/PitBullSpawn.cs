@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PitBullSpawn : MonoBehaviour
 {
+    public GameObject PitBullPrefab;
+    public static float SpawnRarity = 20;
     private WorldGenerator wg;
     private bool lastIsPositive;
 
@@ -35,7 +37,15 @@ public class PitBullSpawn : MonoBehaviour
     {
         if(transform.position.x <= 0 && lastIsPositive)
         {
-            print("SPAWN TIME");
+            float rand = Random.Range(0, SpawnRarity);
+            print(rand.ToString() + ", " + (rand <= 1).ToString());
+            if(Random.Range(0, SpawnRarity) <= 1) {
+                // spawn here;
+                GameObject newPitbull = Instantiate<GameObject>(PitBullPrefab, wg.transform);
+                newPitbull.name = "PitBull";
+                newPitbull.transform.position = transform.position;
+            }
+
             lastIsPositive = false;
         }
         lastIsPositive = transform.position.x > 0;

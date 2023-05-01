@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 132ee6318469106468234b82ac2c73a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carTypes:
+  carTypesNormal:
   - {fileID: 7217548473738804375, guid: 82acea76889330a448c114a584e54605, type: 3}
   - {fileID: 7217548473738804375, guid: a480c0c0798919b49a697e23c2e172f6, type: 3}
   - {fileID: 7217548473738804375, guid: d491efb48bb5e2f4bb9a11da1eda7a17, type: 3}
@@ -154,10 +154,12 @@ MonoBehaviour:
   - {fileID: 6864319272752441658, guid: aab833f61f2a12548948a4a9e451c279, type: 3}
   - {fileID: 6864319272752441658, guid: 08af595828eba7f439f7ec8de66faeb4, type: 3}
   - {fileID: 6864319272752441658, guid: 4f3a5abf9131e6c4cb92b89786009ad2, type: 3}
+  carTypesRare:
   - {fileID: 6864319272752441658, guid: e82fcce32c5486647a9d80a04e1b4169, type: 3}
   carParent: {fileID: 0}
   carPosList: []
   SpawnRate: 25
+  rarityChance: 90
 --- !u!1 &4583980938617747051
 GameObject:
   m_ObjectHideFlags: 0

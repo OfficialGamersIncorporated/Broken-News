@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6454c7b3cedb8864f91ae31a9ddcde9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PitBullPrefab: {fileID: 5514601183104562520, guid: 79d830606ea71cc4f9946e502170d3a7,
+    type: 3}
 --- !u!1 &1902061333653060810
 GameObject:
   m_ObjectHideFlags: 0

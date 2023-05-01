@@ -34,6 +34,7 @@ public class GameplayManager : MonoBehaviour {
             World.Speed = state.WorldSpeed;
             Spawner.SpawnRate = state.CarSpawnRate;
             BikeLaneClutterSpawner.PedestrianSpawnRateMult = state.BikeLaneClutterSpawnRate;
+            PitBullSpawn.SpawnRarity = state.PitBullSpawnRarity;
         }
     }
     public void IncrementScore(float _deltaScore = 1) {
@@ -48,4 +49,5 @@ public class DifficultyState {
     public float WorldSpeed;
     public float CarSpawnRate;
     public float BikeLaneClutterSpawnRate;
+    public float PitBullSpawnRarity;
 }
