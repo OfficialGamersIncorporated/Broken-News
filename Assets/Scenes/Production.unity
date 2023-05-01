@@ -279,6 +279,11 @@ PrefabInstance:
       objectReference: {fileID: 286423820}
     - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
         type: 3}
+      propertyPath: rarityChance
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
       propertyPath: carTypesRare.Array.size
       value: 1
       objectReference: {fileID: 0}
