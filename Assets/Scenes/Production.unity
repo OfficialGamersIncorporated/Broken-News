@@ -277,6 +277,89 @@ PrefabInstance:
       propertyPath: carParent
       value: 
       objectReference: {fileID: 286423820}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[0]
+      value: 
+      objectReference: {fileID: 7217548473738804375, guid: 82acea76889330a448c114a584e54605,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[1]
+      value: 
+      objectReference: {fileID: 7217548473738804375, guid: a480c0c0798919b49a697e23c2e172f6,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[2]
+      value: 
+      objectReference: {fileID: 7217548473738804375, guid: d491efb48bb5e2f4bb9a11da1eda7a17,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[3]
+      value: 
+      objectReference: {fileID: 7217548473738804375, guid: bc63d2fd066327347befb6cc433d5e17,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[4]
+      value: 
+      objectReference: {fileID: 3383997638682909582, guid: f8b7a401107ba6a4195af3e876b77fd8,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[5]
+      value: 
+      objectReference: {fileID: 3383997638682909582, guid: 8df0385e95116f64f92fb5392931c595,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[6]
+      value: 
+      objectReference: {fileID: 3383997638682909582, guid: c8d106539d69a1e428317d676eaeafea,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[7]
+      value: 
+      objectReference: {fileID: 3383997638682909582, guid: 22d9e4db10d735149bbc89b336a8c02b,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[8]
+      value: 
+      objectReference: {fileID: 6864319272752441658, guid: 0b20d5f0a7912da46ad49dcac4885fa5,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[9]
+      value: 
+      objectReference: {fileID: 6864319272752441658, guid: aab833f61f2a12548948a4a9e451c279,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[10]
+      value: 
+      objectReference: {fileID: 6864319272752441658, guid: 08af595828eba7f439f7ec8de66faeb4,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[11]
+      value: 
+      objectReference: {fileID: 6864319272752441658, guid: 4f3a5abf9131e6c4cb92b89786009ad2,
+        type: 3}
+    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: carTypes.Array.data[12]
+      value: 
+      objectReference: {fileID: 6864319272752441658, guid: e82fcce32c5486647a9d80a04e1b4169,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a49c913387273a45bdf9fe0a2417062, type: 3}
 --- !u!1 &286423820 stripped
