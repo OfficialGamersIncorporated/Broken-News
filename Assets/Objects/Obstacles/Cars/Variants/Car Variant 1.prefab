@@ -15,17 +15,17 @@ PrefabInstance:
     - target: {fileID: 3780184097149598871, guid: c80771e466e811b4c80acb55dfb79eef,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 3780184097149598871, guid: c80771e466e811b4c80acb55dfb79eef,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 3780184097149598871, guid: c80771e466e811b4c80acb55dfb79eef,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 3780184097149598871, guid: c80771e466e811b4c80acb55dfb79eef,
         type: 3}
@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 4557143390723958317, guid: c80771e466e811b4c80acb55dfb79eef,
         type: 3}
       propertyPath: m_Name
-      value: Car Variant 1 Variant 2
+      value: Car Variant 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c80771e466e811b4c80acb55dfb79eef, type: 3}
