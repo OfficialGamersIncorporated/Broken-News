@@ -533,15 +533,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score: '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8707fd52c0e79794fa6732148288a144, type: 2}
+  m_sharedMaterial: {fileID: 1279989538238887477, guid: 8707fd52c0e79794fa6732148288a144,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294958776
+  m_fontColor: {r: 0.7216981, g: 0.87251526, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -693,7 +694,6 @@ MonoBehaviour:
     DelayBeforeApply: 0
     WorldSpeed: 0
     CarSpawnRate: 0
-  CurrentScore: 0
   DifficultyStates:
   - DelayBeforeApply: 15
     WorldSpeed: 6
@@ -1037,7 +1037,7 @@ PrefabInstance:
     - target: {fileID: 3662574774524333121, guid: e0fd1825d79b3d3419025be8dc0e0f4a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3662574774524333121, guid: e0fd1825d79b3d3419025be8dc0e0f4a,
         type: 3}
@@ -1181,7 +1181,7 @@ Transform:
   m_Children:
   - {fileID: 7480292693250687928}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2022383271
 MonoBehaviour:

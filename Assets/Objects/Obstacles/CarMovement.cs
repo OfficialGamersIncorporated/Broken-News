@@ -9,6 +9,8 @@ public class CarMovement : MonoBehaviour
     public Vector2 SpeedRange_Oncoming = new Vector2(0, 15);
     public float HitAndRunRarity = 20;
     public float HitAndRunSpeedBoost = 20;
+    public Transform AngrySpeachBubblePrefab;
+    Transform angrySpeachBubble;
     Rigidbody carbody;
     bool IsHitAndRun = false;
 
@@ -36,21 +38,25 @@ public class CarMovement : MonoBehaviour
         }
     }
 
+    void EnableAngrySpeachBubble() {
+        if(!angrySpeachBubble) {
+            angrySpeachBubble = Instantiate<Transform>(AngrySpeachBubblePrefab, transform);
+            angrySpeachBubble.localPosition = Vector3.up * 2.5f;
+        }
+    }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        // if we hit the pitBull always run it the hell over // car should still get derailed though and fly into oncoming traffic.
+        if(collision.gameObject.CompareTag("Player") || collision.gameObject.name == "PitBull")
         {
             carbody.constraints = 0;
-        }
-        // if we hit the pitBull always run it the hell over
-        if(collision.gameObject.name == "PitBull")
-        {
-            return;
+            EnableAngrySpeachBubble();
         }
 
         if(IsHitAndRun) return;
 
-        else if(collision.gameObject.CompareTag("Car")) {
+        if(collision.gameObject.CompareTag("Car")) {
+            EnableAngrySpeachBubble();
             if(Random.Range(0, HitAndRunRarity) <= 1) {
                 print("HIT AND RUUUUN");
                 carSpeedMod = WorldGenerator.Singleton.Speed + HitAndRunSpeedBoost;
