@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &57045323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57045324}
+  m_Layer: 0
+  m_Name: pedPos6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57045324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57045323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.69, y: 0, z: -0.92}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1779437838}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &129698361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -748,6 +779,7 @@ MonoBehaviour:
     CarSpawnRate: 50
   AlreadyHitHouses: []
   AlreadyHitPedestrian: []
+  AlreadyPassedDoors: []
 --- !u!4 &909331868
 Transform:
   m_ObjectHideFlags: 0
@@ -1131,6 +1163,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0fd1825d79b3d3419025be8dc0e0f4a, type: 3}
+--- !u!4 &1779437838 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3709157786496017924, guid: 5a73ba3358acce746a1b43726d32ba47,
+    type: 3}
+  m_PrefabInstance: {fileID: 3709157786058766090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2022383266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1380,12 @@ PrefabInstance:
       propertyPath: pedestrianParent
       value: 
       objectReference: {fileID: 899130018}
+    - target: {fileID: 3709157786496017927, guid: 5a73ba3358acce746a1b43726d32ba47,
+        type: 3}
+      propertyPath: pedestrianTypes.Array.data[0]
+      value: 
+      objectReference: {fileID: 3364148710552349198, guid: f02276b51a75d5044adf4ab05fb28096,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a73ba3358acce746a1b43726d32ba47, type: 3}
 --- !u!1001 &6889097872873676079

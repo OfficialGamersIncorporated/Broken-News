@@ -84,6 +84,10 @@ public class paperCollision : MonoBehaviour
                     GameplayManager.Singleton.IncrementScore(5);
                     particleSystem.Emit(30);
                     //particleSystem.Play();
+                    pedestrianAnimationSwitcher itsHit = collision.gameObject.GetComponent<pedestrianAnimationSwitcher>();
+                    if(itsHit){
+                        itsHit.pedHit();
+                    }
                 }
             }
             

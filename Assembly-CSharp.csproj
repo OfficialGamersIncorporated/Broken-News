@@ -104,6 +104,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Boy\scripts\DeathChecker.cs" />
     <Compile Include="Assets\Objects\World\pedestrianSpawner.cs" />
+    <Compile Include="Assets\Objects\Pedestrians\pedestrianAnimationSwitcher.cs" />
+    <Compile Include="Assets\Objects\Obstacles\PitBull\followPlayer.cs" />
+    <Compile Include="Assets\Objects\Obstacles\PitBull\PitBullSpawn.cs" />
+    <Compile Include="Assets\Objects\Obstacles\GenericDeathChecker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -854,6 +858,9 @@
     </Reference>
     <Reference Include="Unity.SysrootPackage.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
