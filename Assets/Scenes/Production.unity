@@ -342,37 +342,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a49c913387273a45bdf9fe0a2417062, type: 3}
---- !u!1 &277036063
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 277036064}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &277036064
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277036063}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &286423820 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4917919411838895264, guid: 4cd29040e583f1843b1ea538ef685493,
@@ -765,27 +734,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   World: {fileID: 667192198}
   Spawner: {fileID: 1608225852}
+  BikeLaneClutterSpawner: {fileID: 0}
   ScoreText: {fileID: 729514467}
   currentDifficultyState:
     DelayBeforeApply: 0
     WorldSpeed: 0
     CarSpawnRate: 0
+    BikeLaneClutterSpawnRate: 0
   DifficultyStates:
   - DelayBeforeApply: 15
     WorldSpeed: 6
     CarSpawnRate: 30
+    BikeLaneClutterSpawnRate: 60
   - DelayBeforeApply: 15
     WorldSpeed: 7
     CarSpawnRate: 35
+    BikeLaneClutterSpawnRate: 65
   - DelayBeforeApply: 20
     WorldSpeed: 8
     CarSpawnRate: 40
+    BikeLaneClutterSpawnRate: 70
   - DelayBeforeApply: 25
     WorldSpeed: 9
     CarSpawnRate: 45
+    BikeLaneClutterSpawnRate: 75
   - DelayBeforeApply: 30
     WorldSpeed: 10
     CarSpawnRate: 50
+    BikeLaneClutterSpawnRate: 80
   AlreadyHitHouses: []
   AlreadyHitPedestrian: []
   AlreadyPassedDoors: []
@@ -1526,7 +1502,7 @@ MonoBehaviour:
   - {fileID: 1313771849}
   - {fileID: 1109471332}
   - {fileID: 523002853}
-  PedestrianSpawnRateMult: 56.9
+  PedestrianSpawnRateMult: 60
 --- !u!1 &2973151633926322644
 GameObject:
   m_ObjectHideFlags: 0

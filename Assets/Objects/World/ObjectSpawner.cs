@@ -7,7 +7,7 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject[] pedestrianTypes;
     public GameObject pedestrianParent;
     public GameObject[] pedestrianPosList;
-    [Tooltip("Amount of Pedestrians Spawned per Minute"), Range(10, 100)]
+    [Tooltip("Amount of Pedestrians Spawned per Minute"), Range(10, 150)]
     public float PedestrianSpawnRateMult = 1;
 
 

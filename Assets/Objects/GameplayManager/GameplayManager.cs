@@ -8,6 +8,7 @@ public class GameplayManager : MonoBehaviour {
     public static GameplayManager Singleton;
     public WorldGenerator World;
     public CarSpawner Spawner;
+    public ObjectSpawner BikeLaneClutterSpawner;
     public TextMeshProUGUI ScoreText;
 
     [Space, Tooltip("this is only visible for debugging.")]
@@ -32,6 +33,7 @@ public class GameplayManager : MonoBehaviour {
             currentDifficultyState = state;
             World.Speed = state.WorldSpeed;
             Spawner.SpawnRate = state.CarSpawnRate;
+            BikeLaneClutterSpawner.PedestrianSpawnRateMult = state.BikeLaneClutterSpawnRate;
         }
     }
     public void IncrementScore(float _deltaScore = 1) {
@@ -45,4 +47,5 @@ public class DifficultyState {
     public float DelayBeforeApply;
     public float WorldSpeed;
     public float CarSpawnRate;
+    public float BikeLaneClutterSpawnRate;
 }
