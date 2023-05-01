@@ -6,12 +6,14 @@ using UnityEngine;
 
 public class CarSpawner : MonoBehaviour
 {
-    public GameObject[] carTypes;
+    public GameObject[] carTypesNormal;
+    public GameObject[] carTypesRare;
     public GameObject carParent;
     public GameObject[] carPosList;
-    [Tooltip("Waves of cars per minute"), Range(10, 100)]
+    [Tooltip("Waves of cars per minute"), Range(1, 100)]
     public float SpawnRate = 1;
-
+    [Tooltip("Rare type chance"), Range(1, 100)]
+    public int rarityChance = 10;
 
     private IEnumerator Start()
     {
@@ -20,8 +22,6 @@ public class CarSpawner : MonoBehaviour
         {
             carPosList[i] = GameObject.Find("pos" + (i));
         }
-
-
 
         while (true)
         {
@@ -38,32 +38,32 @@ public class CarSpawner : MonoBehaviour
                 3
             };
 
-
-
-            //print("Difficulty: " + difficulty);
-
             for (int i = 0; i < difficulty; i++)
             {
-                int carTypeDecider = UnityEngine.Random.Range(0, carTypes.Length); // Randomly chooses car model
-                int laneIndex = UnityEngine.Random.Range(0, availableLanes.Count); // get a random index from the available lanes
-                int laneDecider = availableLanes[laneIndex]; // choose the lane at that index
-                availableLanes.RemoveAt(laneIndex); // remove the chosen lane from the list
-                //print("Lane: " + laneDecider);
-                //print("Car Type: " + carTypeDecider);
+                int rarityDecider = UnityEngine.Random.Range(0, rarityChance);
+                print("Rarity roll: " + rarityDecider);
+                if(rarityDecider < (rarityChance - 1)) // chance for normal car type
+                {
+                    int carTypeDecider = UnityEngine.Random.Range(0, carTypesNormal.Length); // Randomly chooses car model
+                    int laneIndex = UnityEngine.Random.Range(0, availableLanes.Count); // get a random index from the available lanes
+                    int laneDecider = availableLanes[laneIndex]; // choose the lane at that index
+                    availableLanes.RemoveAt(laneIndex); // remove the chosen lane from the list
+                    GameObject chosenLane = carPosList[laneDecider];
+                    Vector3 clonedCarPos = new Vector3(chosenLane.transform.position.x, 0, chosenLane.transform.position.z);
+                    Instantiate(carTypesNormal[carTypeDecider], clonedCarPos, chosenLane.transform.rotation, carParent.transform);
+                }
+                else // chance for rare car type
+                {
+                    int carTypeDecider = UnityEngine.Random.Range(0, carTypesRare.Length); // Randomly chooses car model
+                    int laneIndex = UnityEngine.Random.Range(0, availableLanes.Count); // get a random index from the available lanes
+                    int laneDecider = availableLanes[laneIndex]; // choose the lane at that index
+                    availableLanes.RemoveAt(laneIndex); // remove the chosen lane from the list
+                    GameObject chosenLane = carPosList[laneDecider];
+                    Vector3 clonedCarPos = new Vector3(chosenLane.transform.position.x, 0, chosenLane.transform.position.z);
+                    Instantiate(carTypesRare[carTypeDecider], clonedCarPos, chosenLane.transform.rotation, carParent.transform);
+                }
 
-
-
-                GameObject chosenLane = carPosList[laneDecider];
-                Vector3 clonedCarPos = new Vector3(chosenLane.transform.position.x, 0, chosenLane.transform.position.z);
-                Instantiate(carTypes[carTypeDecider], clonedCarPos, chosenLane.transform.rotation, carParent.transform);
             }
-
-            //GameObject clonedCar = Instantiate(carTypes[carTypeDecider], carPosList[laneDecider].transform.position, carPosList[laneDecider].transform.rotation);
-
-            //Vector3 SpawnPosition = new Vector3(pos0x, 0, pos0z);
-            //Instantiate(carTypes[carTypeDecider], SpawnPosition, Quaternion.identity, carParent.transform);
-
-
         }
     }
 }
