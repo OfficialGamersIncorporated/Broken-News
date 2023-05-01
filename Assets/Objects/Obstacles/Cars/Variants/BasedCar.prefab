@@ -69,6 +69,8 @@ MonoBehaviour:
   HitAndRunSpeedBoost: 15
   AngrySpeachBubblePrefab: {fileID: 4631931854211429721, guid: bfbd51565c962ac47a700d4a1f0283f4,
     type: 3}
+  Sound_HitAndRun: {fileID: 8626628720770920591}
+  Sound_Crash: {fileID: 3188667850395945094}
 --- !u!1001 &4656784926756136347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136,11 +138,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarSound
       objectReference: {fileID: 0}
+    - target: {fileID: 3969861680406123796, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7845364781845212445, guid: 6123239987377f14bb7191b2da74a3a0,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6123239987377f14bb7191b2da74a3a0, type: 3}
+--- !u!82 &3188667850395945094 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7845364781845212445, guid: 6123239987377f14bb7191b2da74a3a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4656784926756136347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5522587105297262908 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 865837375884102823, guid: 6123239987377f14bb7191b2da74a3a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4656784926756136347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &8626628720770920591 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3969861680406123796, guid: 6123239987377f14bb7191b2da74a3a0,
     type: 3}
   m_PrefabInstance: {fileID: 4656784926756136347}
   m_PrefabAsset: {fileID: 0}

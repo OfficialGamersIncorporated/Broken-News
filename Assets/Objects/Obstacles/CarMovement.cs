@@ -14,7 +14,9 @@ public class CarMovement : MonoBehaviour
     Rigidbody carbody;
     bool IsHitAndRun = false;
 
-    AudioSource Sound_HitAndRun;
+    [Header("Sounds")]
+    public AudioSource Sound_HitAndRun;
+    public AudioSource Sound_Crash;
 
     
     // Start is called before the first frame update
@@ -58,9 +60,11 @@ public class CarMovement : MonoBehaviour
         if(IsHitAndRun) return;
 
         if(collision.gameObject.CompareTag("Car")) {
+            Sound_Crash.Play();
             EnableAngrySpeachBubble();
             if(Random.Range(0, HitAndRunRarity) <= 1) {
-                print("HIT AND RUUUUN");
+                //print("HIT AND RUUUUN");
+                Sound_HitAndRun.Play();
                 carSpeedMod = WorldGenerator.Singleton.Speed + HitAndRunSpeedBoost;
                 IsHitAndRun = true;
                 return;
