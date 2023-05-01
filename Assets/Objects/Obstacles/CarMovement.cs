@@ -10,9 +10,12 @@ public class CarMovement : MonoBehaviour
     public float HitAndRunRarity = 20;
     public float HitAndRunSpeedBoost = 20;
     public Transform AngrySpeachBubblePrefab;
+    public ParticleSystem RocketParticles;
+    AudioSource Sound_RocketEngine;
     Transform angrySpeachBubble;
     Rigidbody carbody;
     bool IsHitAndRun = false;
+    bool IsARocket = false;
 
     [Header("Sounds")]
     public AudioSource Sound_HitAndRun;
@@ -22,6 +25,10 @@ public class CarMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Sound_RocketEngine = RocketParticles.gameObject.GetComponent<AudioSource>();
+        var _particleMain = RocketParticles.main;
+        _particleMain.customSimulationSpace = WorldGenerator.Singleton.transform;
+
         if (Vector3.Dot(transform.forward, Vector3.right) > 0) {
             carSpeedMod = WorldGenerator.Singleton.Speed + SpeedRange_SameDir.x + Mathf.Pow(Random.Range(0, SpeedRange_SameDir.y) / 10, 2); //Random.Range(15, 20);
         } else {
@@ -39,6 +46,14 @@ public class CarMovement : MonoBehaviour
 
         if (transform.position.y < -10) {
             GameObject.Destroy(gameObject);
+        }
+
+        if (transform.position.y > 1.5 || (transform.position.y > 0 && Vector3.Dot(transform.forward, Vector3.up)> .5f)) {
+            if(!IsARocket) {
+                if(Sound_RocketEngine) Sound_RocketEngine.Play();
+                RocketParticles.Play();
+            }
+            IsARocket = true;
         }
     }
 

@@ -31,6 +31,8 @@ public class DeathChecker : MonoBehaviour {
         gameObject.GetComponent<CapsuleCollider>().height = 1;
         Rigidbody rigidbody = gameObject.AddComponent<Rigidbody>();
         rigidbody.angularVelocity = Vector3.forward * 90;
+        rigidbody.drag = 2;
+        rigidbody.angularDrag = 2;
         var main = particleSystem.main;
         main.customSimulationSpace = WorldGenerator.Singleton.transform;
         transform.parent = WorldGenerator.Singleton.transform;

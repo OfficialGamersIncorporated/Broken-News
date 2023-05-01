@@ -17,7 +17,9 @@ public class WorldGenerator : MonoBehaviour {
         Singleton = this;
     }
 
-    private void FixedUpdate() {
+    private void Update() {
+        float deltaTime = Time.deltaTime; //Time.fixedDeltaTime;
+
         float currentSpeed = Speed;
         //if(SpeedUpCollider.PlayerTouching) {
         //    currentSpeed = PlayerMaxSpeed;
@@ -32,7 +34,7 @@ public class WorldGenerator : MonoBehaviour {
         }
 
 
-        transform.position += currentSpeed * Time.fixedDeltaTime * Vector3.left;
+        transform.position += currentSpeed * deltaTime * Vector3.left;
         float xOffset = transform.position.x % (Spacing * 2);
         Ground.transform.position = new Vector3(xOffset, transform.position.y, transform.position.z);
     }
