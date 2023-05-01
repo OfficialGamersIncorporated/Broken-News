@@ -42,6 +42,11 @@ public class CarMovement : MonoBehaviour
         {
             carbody.constraints = 0;
         }
+        // if we hit the pitBull always run it the hell over
+        if(collision.gameObject.name == "PitBull")
+        {
+            return;
+        }
 
         if(IsHitAndRun) return;
 

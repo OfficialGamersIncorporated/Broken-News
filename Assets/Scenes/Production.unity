@@ -135,11 +135,6 @@ PrefabInstance:
       propertyPath: theWorld
       value: 
       objectReference: {fileID: 667192196}
-    - target: {fileID: 4964111780810870098, guid: 93e5c6f53f1c5c94ebc02337109bd370,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: abe7beb9428987542975f220dc4fab59, type: 2}
     - target: {fileID: 7133543499475653759, guid: 93e5c6f53f1c5c94ebc02337109bd370,
         type: 3}
       propertyPath: m_RootOrder
@@ -716,7 +711,8 @@ MonoBehaviour:
     WorldSpeed: 10
     CarSpawnRate: 50
   AlreadyHitHouses: []
-  AlreadyScoredDudes: []
+  AlreadyHitPedestrian: []
+  AlreadyPassedDoors: []
 --- !u!4 &909331868
 Transform:
   m_ObjectHideFlags: 0
@@ -1305,16 +1301,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4917919411967425783, guid: 4cd29040e583f1843b1ea538ef685493,
-        type: 3}
-      propertyPath: Speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4917919411967425783, guid: 4cd29040e583f1843b1ea538ef685493,
-        type: 3}
-      propertyPath: RunSpeedMultiplier
-      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cd29040e583f1843b1ea538ef685493, type: 3}

@@ -3,27 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeathChecker : MonoBehaviour {
+public class GenericDeathChecker : MonoBehaviour {
 
     public bool IsDead = false;
     public Transform BloodProjectorPrefab;
-    public static DeathChecker Singleton;
+    [HideInInspector()]
+    public GameObject world;
 
     //public Transform SpriteRenderer;
     new public ParticleSystem particleSystem;
     void Awake()
     {
-        Singleton = this;
+    
+    }
+    void Start()
+    {
+        world = WorldGenerator.Singleton.gameObject;
     }
     public IEnumerator Die() {
-        GetComponent<PlayerMovement>().enabled = false;
-        GetComponent<CharacterController>().enabled = false;
-        GetComponent<Animator>().enabled = false;
+        transform.SetParent(world.transform);
         //Transform newRenderer = Instantiate<Transform>(SpriteRenderer);
         //newRenderer.rotation *= Quaternion.Euler(0,90,0);
         //newRenderer.SetParent(transform, false);
         gameObject.AddComponent<CapsuleCollider>();
-        Rigidbody rigidbody = gameObject.AddComponent<Rigidbody>();
+        Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
         rigidbody.angularVelocity = Vector3.forward * 90;
         var main = particleSystem.main;
         main.customSimulationSpace = WorldGenerator.Singleton.transform;
@@ -33,7 +36,6 @@ public class DeathChecker : MonoBehaviour {
             yield return new WaitForSeconds(.25f);
         }
         //yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("DeadMenu");
     }
 
     private void OnCollisionEnter(Collision collision) {

@@ -17,6 +17,8 @@ public class GameplayManager : MonoBehaviour {
     public List<Vector3> AlreadyHitHouses = new List<Vector3>();
     public List<GameObject> AlreadyHitPedestrian = new List<GameObject>();
 
+    public List<Vector3> AlreadyPassedDoors = new List<Vector3>();
+
     string ScoreTextDefault;
 
     IEnumerator Start() {
