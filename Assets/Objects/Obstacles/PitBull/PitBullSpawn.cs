@@ -38,7 +38,7 @@ public class PitBullSpawn : MonoBehaviour
         if(transform.position.x <= 0 && lastIsPositive)
         {
             float rand = Random.Range(0, SpawnRarity);
-            print(rand.ToString() + ", " + (rand <= 1).ToString());
+            //print(rand.ToString() + ", " + (rand <= 1).ToString());
             if(Random.Range(0, SpawnRarity) <= 1) {
                 // spawn here;
                 GameObject newPitbull = Instantiate<GameObject>(PitBullPrefab, wg.transform);

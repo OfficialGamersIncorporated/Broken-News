@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 7133543499475653759, guid: 93e5c6f53f1c5c94ebc02337109bd370,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7133543499475653759, guid: 93e5c6f53f1c5c94ebc02337109bd370,
         type: 3}
@@ -217,10 +217,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4583980938333533648, guid: 3a49c913387273a45bdf9fe0a2417062,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4583980938333533654, guid: 3a49c913387273a45bdf9fe0a2417062,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4583980938333533654, guid: 3a49c913387273a45bdf9fe0a2417062,
         type: 3}
@@ -697,7 +702,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 53.624, y: 0, z: 0}
 --- !u!1 &667192196 stripped
 GameObject:
@@ -809,7 +814,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.5
+  m_fontSize: 41.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1083,37 +1088,44 @@ MonoBehaviour:
     CarSpawnRate: 0
     BikeLaneClutterSpawnRate: 0
     PitBullSpawnRarity: 0
+    PitBullRunSpeed: 0
   DifficultyStates:
   - DelayBeforeApply: 0
     WorldSpeed: 5
-    CarSpawnRate: 25
-    BikeLaneClutterSpawnRate: 55
+    CarSpawnRate: 15
+    BikeLaneClutterSpawnRate: 40
     PitBullSpawnRarity: 1000
+    PitBullRunSpeed: 4
   - DelayBeforeApply: 20
     WorldSpeed: 6
-    CarSpawnRate: 25
-    BikeLaneClutterSpawnRate: 60
-    PitBullSpawnRarity: 10
+    CarSpawnRate: 17.5
+    BikeLaneClutterSpawnRate: 50
+    PitBullSpawnRarity: 25
+    PitBullRunSpeed: 6
   - DelayBeforeApply: 20
     WorldSpeed: 7
-    CarSpawnRate: 30
+    CarSpawnRate: 20
     BikeLaneClutterSpawnRate: 65
-    PitBullSpawnRarity: 7
+    PitBullSpawnRarity: 20
+    PitBullRunSpeed: 8
   - DelayBeforeApply: 25
     WorldSpeed: 8
-    CarSpawnRate: 35
+    CarSpawnRate: 25
     BikeLaneClutterSpawnRate: 70
-    PitBullSpawnRarity: 6
+    PitBullSpawnRarity: 15
+    PitBullRunSpeed: 9
   - DelayBeforeApply: 30
     WorldSpeed: 9
-    CarSpawnRate: 40
+    CarSpawnRate: 35
     BikeLaneClutterSpawnRate: 75
-    PitBullSpawnRarity: 5
+    PitBullSpawnRarity: 7
+    PitBullRunSpeed: 10
   - DelayBeforeApply: 35
     WorldSpeed: 10
     CarSpawnRate: 45
     BikeLaneClutterSpawnRate: 80
-    PitBullSpawnRarity: 4
+    PitBullSpawnRarity: 5
+    PitBullRunSpeed: 12
   AlreadyHitHouses: []
   AlreadyHitPedestrian: []
   AlreadyPassedDoors: []
@@ -1130,7 +1142,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &924198915
 GameObject:
@@ -1410,7 +1422,7 @@ RectTransform:
   - {fileID: 973409261}
   - {fileID: 729514466}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1879,7 +1891,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 53.624, y: 0, z: 0}
 --- !u!1 &1445684513
 GameObject:
@@ -1947,7 +1959,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1571407667 stripped
 GameObject:
@@ -2111,7 +2123,7 @@ PrefabInstance:
     - target: {fileID: 3662574774524333121, guid: e0fd1825d79b3d3419025be8dc0e0f4a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3662574774524333121, guid: e0fd1825d79b3d3419025be8dc0e0f4a,
         type: 3}
@@ -2322,7 +2334,7 @@ PrefabInstance:
     - target: {fileID: 3709157786496017924, guid: 5a73ba3358acce746a1b43726d32ba47,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3709157786496017924, guid: 5a73ba3358acce746a1b43726d32ba47,
         type: 3}
@@ -2637,7 +2649,7 @@ Transform:
   m_Children:
   - {fileID: 7480292693250687928}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2022383271
 MonoBehaviour:
@@ -2844,7 +2856,7 @@ Transform:
   - {fileID: 1109471333}
   - {fileID: 523002854}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2973151633589687486
 GameObject:
@@ -2931,7 +2943,7 @@ PrefabInstance:
     - target: {fileID: 4917919411967425782, guid: 4cd29040e583f1843b1ea538ef685493,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4917919411967425782, guid: 4cd29040e583f1843b1ea538ef685493,
         type: 3}
