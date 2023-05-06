@@ -17,8 +17,8 @@ public class WorldGenerator : MonoBehaviour {
         Singleton = this;
     }
 
-    private void Update() {
-        float deltaTime = Time.deltaTime; //Time.fixedDeltaTime;
+    private void FixedUpdate() {
+        float deltaTime = Time.fixedDeltaTime; //Time.fixedDeltaTime;
 
         float currentSpeed = Speed;
         //if(SpeedUpCollider.PlayerTouching) {

@@ -13,7 +13,7 @@ public class WarningIndicator : MonoBehaviour {
     void Start() {
         cam = Camera.main;
     }
-    void LateUpdate() {
+    void FixedUpdate() {
         Vector3 cameraInlineFocusDirection = Vector3.ProjectOnPlane(transform.position - cam.transform.position, cam.transform.right);
         float distanceForward = cameraInlineFocusDirection.magnitude;
         float distanceHorizontal = ((cam.transform.position + cameraInlineFocusDirection) - transform.position).magnitude;

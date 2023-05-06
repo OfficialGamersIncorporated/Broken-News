@@ -222,11 +222,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarSpawner
       objectReference: {fileID: 0}
-    - target: {fileID: 4583980938333533648, guid: 3a49c913387273a45bdf9fe0a2417062,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4583980938333533654, guid: 3a49c913387273a45bdf9fe0a2417062,
         type: 3}
       propertyPath: m_RootOrder
