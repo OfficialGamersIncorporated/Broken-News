@@ -1,8 +1,14 @@
 ![banner](https://user-images.githubusercontent.com/32988106/236602479-e0610f50-6706-41d6-bdff-aa68a6ee7903.png)
 # Broken News
-A game about a boy running a newspaper route on his unicycle dodging traffic due to lackluster cycling infrastructure.
+A game about a boy running a newspaper route on his unicycle and dodging traffic due to lackluster cycling infrastructure.
 
  This game is a jam entry for LUDUM DARE 53 2023 using Unity 2021.3.24f1
+ 
+ Ludum Dare's website:
+ https://ldjam.com/events/ludum-dare/53/broken-news
+ 
+ Itch.io:
+ https://pc-hris.itch.io/broken-news
  
 # Screenshots
 ![2023-05-01 (2)](https://user-images.githubusercontent.com/32988106/236602526-8810edf9-3db0-4c92-a433-9b7eb483bbc1.png)
