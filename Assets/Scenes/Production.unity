@@ -203,6 +203,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boy
       objectReference: {fileID: 0}
+    - target: {fileID: 7833073372927138464, guid: 93e5c6f53f1c5c94ebc02337109bd370,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93e5c6f53f1c5c94ebc02337109bd370, type: 3}
 --- !u!1001 &195607032
@@ -282,22 +287,6 @@ PrefabInstance:
       propertyPath: carParent
       value: 
       objectReference: {fileID: 286423820}
-    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
-        type: 3}
-      propertyPath: rarityChance
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
-        type: 3}
-      propertyPath: carTypesRare.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4583980938333533655, guid: 3a49c913387273a45bdf9fe0a2417062,
-        type: 3}
-      propertyPath: carTypesRare.Array.data[1]
-      value: 
-      objectReference: {fileID: 7374840207702353695, guid: 31344abfa2285d746842f9c7cab31497,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a49c913387273a45bdf9fe0a2417062, type: 3}
 --- !u!1 &219340879
@@ -814,7 +803,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.7
+  m_fontSize: 41.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

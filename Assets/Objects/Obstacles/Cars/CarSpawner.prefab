@@ -156,10 +156,11 @@ MonoBehaviour:
   - {fileID: 6864319272752441658, guid: 4f3a5abf9131e6c4cb92b89786009ad2, type: 3}
   carTypesRare:
   - {fileID: 6864319272752441658, guid: e82fcce32c5486647a9d80a04e1b4169, type: 3}
+  - {fileID: 7374840207702353695, guid: 31344abfa2285d746842f9c7cab31497, type: 3}
   carParent: {fileID: 0}
   carPosList: []
   SpawnRate: 25
-  rarityChance: 90
+  rarityChance: 80
 --- !u!1 &4583980938617747051
 GameObject:
   m_ObjectHideFlags: 0
